@@ -1,0 +1,7 @@
+<!--This configuration is only used for testing -->
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!--Setting the logging level to error and turn off some of Spring's logging-->
+    <root level="error"/>
+</configuration>

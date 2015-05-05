@@ -1,0 +1,16 @@
+ch/ethz/globis/isk/parser/processor/ProceedingsXMLProcessor.class
+ch/ethz/globis/isk/parser/config/ParserApplication.class
+ch/ethz/globis/isk/parser/processor/ArticleXMLProcessor.class
+ch/ethz/globis/isk/parser/processor/FieldMapper.class
+ch/ethz/globis/isk/parser/processor/EntityXMLProcessor.class
+ch/ethz/globis/isk/parser/DBLPTag.class
+ch/ethz/globis/isk/parser/processor/InProceedingsXMLProcessor.class
+ch/ethz/globis/isk/parser/processor/MastersThesisXMLProcessor.class
+ch/ethz/globis/isk/parser/processor/EntityCache.class
+ch/ethz/globis/isk/parser/processor/ProcessorLocator.class
+ch/ethz/globis/isk/parser/processor/PhdThesisXMLProcessor.class
+ch/ethz/globis/isk/parser/processor/PublicationXMLHelper.class
+ch/ethz/globis/isk/parser/processor/InCollectionXMLProcessor.class
+ch/ethz/globis/isk/parser/processor/BookXMLProcessor.class
+ch/ethz/globis/isk/parser/NonXMLDBLPParser.class
+ch/ethz/globis/isk/parser/DBLPParser.class

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>isk-project</artifactId>
+        <groupId>ch.ethz.globis.isk</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ch.ethz.globis.isk</groupId>
+    <artifactId>backend</artifactId>
+    <name>Information Systems Project - Backend </name>
+    <description> <![CDATA[
+    This is a wrapper module containing all the dependencies for a backend. It includes the service and dao
+    API, together with their implementations.
+
+    This module should be used as a dependency by all modules that need access to the service API and one of
+    its implementations.
+    ]]></description>
+    <profiles>
+        <profile>
+            <id>db4o</id>
+            <dependencies>
+                <dependency>
+                    <groupId>ch.ethz.globis.isk</groupId>
+                    <artifactId>db4o-impl</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+            <activation>
+                <property>
+                    <name>backend</name>
+                    <value>db4o</value>
+                </property>
+            </activation>
+        </profile>
+        <profile>
+            <id>mongo</id>
+            <dependencies>
+                <dependency>
+                    <groupId>ch.ethz.globis.isk</groupId>
+                    <artifactId>mongo-impl</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+            <activation>
+                <property>
+                    <name>backend</name>
+                    <value>mongo</value>
+                </property>
+            </activation>
+        </profile>
+        <profile>
+            <id>jpa</id>
+            <dependencies>
+                <dependency>
+                    <groupId>ch.ethz.globis.isk</groupId>
+                    <artifactId>jpa-impl</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+            <activation>
+                <property>
+                    <name>backend</name>
+                    <value>jpa</value>
+                </property>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
+</project>

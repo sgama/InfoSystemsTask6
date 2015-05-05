@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Homepage</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"/>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"/>
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux.css" rel="stylesheet" />
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux-responsive.css" rel="stylesheet" />
+
+    <script src="http://fuelux.exacttargetapps.com/fuelux/2.0/loader.min.js" type="text/javascript"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+</head>
+<body>
+<div  class="navbar" th:replace="menu :: top">
+    Menu content
+</div>
+
+<div id="content" class="container">
+
+        <div class="jumbotron">
+            <div class="row">
+                <h1 th:text="#{label.global-search}"> Site wide search</h1>
+            </div>
+            <div class="row">
+                <form th:action="@{/search/}" role="form">
+                    <div class="form-group col-sm-10">
+                        <input name="searchString" type="text" class="input-lg form-control" id="side-wide-search" placeholder="Search for anything"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg col-sm-2">Search</button>
+                </form>
+            </div>
+
+        </div>
+
+   <div class="row">
+       <div class="col-sm-4">
+            <h2 th:text="#{label.authors}"> Authors - Default </h2>
+            <p th:text="#{text.authors}"> Authors - Default Placeholder </p>
+            <a href="/people" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.journals}"> Journals - Default </h2>
+           <p th:text="#{text.journals}"> Journals - Default Placeholder </p>
+           <a href="/journals" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.publications}"> Publications - Default </h2>
+           <p th:text="#{text.publications}"> Publications - Default Placeholder </p>
+           <a href="/publications" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.conferences}"> Conferences - Default </h2>
+           <p th:text="#{text.conferences}"> Conferences - Default Placeholder </p>
+           <a href="/conferences" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.series}"> Series - Default </h2>
+           <p th:text="#{text.series}"> Series - Default Placeholder </p>
+           <a href="/series" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.schools}"> Schools - Default </h2>
+           <p th:text="#{text.schools}"> Schools - Default Placeholder </p>
+           <a href="/schools"  th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.publishers}"> Publishers - Default </h2>
+           <p th:text="#{text.publishers}"> Publishers - Default Placeholder </p>
+           <a href="/publishers" th:text="#{label.more}"> More </a>
+       </div>
+       <div class="col-sm-4">
+           <h2 th:text="#{label.benchmarks}"> Benchmarks - Default </h2>
+           <p th:text="#{text.benchmarks}"> Benchmarks - Default Placeholder </p>
+           <a href="/benchmarks" th:text="#{label.more}"> More </a>
+       </div>
+   </div>
+</div>
+</body>
+</html>

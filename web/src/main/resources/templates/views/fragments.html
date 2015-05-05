@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div th:fragment="publication_list(publications)">
+        <div th:unless="${publications == null || publications.size() == 0}">
+            <h4> List of publications </h4>
+            <!--Publication list-->
+
+            <div class="row">
+                <div th:each="p : ${publications}" class="container">
+                    <div th:replace="fragments :: publication_single(p=${p})"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:fragment="publication_single(p)">
+        <div class="row thumbnail">
+            <!--Basic information-->
+            <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div th:unless="${p.title == null}">
+                    <h4> Title </h4>
+                    <p th:text="${p.title}"/>
+                </div>
+                <div th:unless="${p.year == null}">
+                    <h4> Year </h4>
+                    <p th:text="${p.year}"/>
+                </div>
+
+                <div th:unless="${p.ee == null}">
+                    <h4> Electronic edition </h4>
+                    <p> <a class="btn btn-primary" th:href="@{${p.ee}}"> Read </a> </p>
+                </div>
+
+                <div th:unless="${p.isbn == null}">
+                    <h4> ISBN </h4>
+                    <p th:text="${p.isbn}"/>
+                </div>
+            </div>
+
+            <!--Authors-->
+            <div th:unless="${p.authors == null || p.authors.size() == 0}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4> Authors </h4>
+                <div th:each="person : ${p.authors}">
+                    <a th:href="@{'/people/' + ${person.id}}" th:text="${person.name}" />
+                </div>
+            </div>
+
+            <!--Editors-->
+            <div th:unless="${p.editors == null || p.editors.size() == 0}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4> Editors </h4>
+                <div th:each="person : ${p.editors}">
+                    <a th:href="@{'/people/' + ${person.id}}" th:text="${person.name}" />
+                </div>
+            </div>
+
+            <!--Article section - check if journal edition-->
+            <div th:unless="${p.journalEdition == null}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div th:unless="${p.journalEdition.journal == null}">
+                    <h4> Journal </h4>
+                    <a th:href="@{'/journals/' + ${p.journalEdition.journal.id}}" th:text="${p.journalEdition.journal.name}"/>
+                </div>
+                <div th:unless="${p.journalEdition.number == null}">
+                    <h4> Journal Number </h4>
+                    <p th:text="${p.journalEdition.number}"/>
+                </div>
+                <div th:unless="${p.journalEdition.volume == null}">
+                    <h4> Journal Volume </h4>
+                    <p th:text="${p.journalEdition.volume}"/>
+                </div>
+
+                <div th:unless="${p.journalEdition.year == null}">
+                    <h4> Journal Year </h4>
+                    <p th:text="${p.journalEdition.year}"/>
+                </div>
+            </div>
+
+            <!--Book section - check if series -->
+            <div th:unless="${p.series == null}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4>Series</h4>
+                <a th:href="@{'/series/' + ${p.series.id}}" th:text="${p.series.name}"/>
+
+                <div th:unless="${p.publisher == null}">
+                    <h4>Publisher</h4>
+                    <a th:href="@{'/publishers/' + ${p.publisher.id}}" th:text="${p.publisher.name}"/>
+                </div>
+
+            </div>
+
+            <!--InCollection section - check if part of book -->
+            <div th:unless="${p.book == null}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4>Book</h4>
+                <p th:text="${p.book.title}"></p>
+
+                <div th:unless="${p.note == null}">
+                    <h4>Note</h4>
+                    <p th:unless="${p.note == null}" th:text="${p.note}"></p>
+                </div>
+
+                <div th:unless="${p.pages == null}">
+                    <h4>Pages</h4>
+                    <p th:unless="${p.pages == null}" th:text="${p.pages}"></p>
+                </div>
+            </div>
+
+            <!--Proceedings section -check if has a conference edition-->
+            <div th:unless="${p.conferenceEdition == null or (p.conferenceEdition != null and p.conferenceEdition.conference == null)}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4> Conference </h4>
+                <a th:href="@{'/conferences/' + ${p.conferenceEdition.conference.id}}" th:text="${p.conferenceEdition.conference.name}"></a>
+
+                <div th:unless="${p.series == null}">
+                    <h4>Series</h4>
+                    <a th:href="@{'/series/' + ${p.series.id}}" th:text="${p.series.name}"/>
+                </div>
+
+                <div th:unless="${p.publisher == null}">
+                    <h4>Publisher</h4>
+                    <a th:href="@{'/publishers/' + ${p.publisher.id}}" th:text="${p.publisher.name}"/>
+                </div>
+            </div>
+
+            <!--InProceedings section - check if part of proceedings -->
+            <div th:unless="${p.proceedings == null }" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4> Part of proceedings </h4>
+                <p th:text="${p.proceedings.title}"/>
+
+                <h4> Pages </h4>
+                <p th:unless="${p.pages == null}" th:text="${p.pages}"></p>
+            </div>
+
+            <!--Phd Thesis section - check if part of proceedings -->
+            <div th:unless="${p.school == null}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4> School </h4>
+                <a th:href="@{'/schools/' + ${p.school.id}}" th:text="${p.school.name}"/>
+            </div>
+        </div>
+    </div>
+
+    <div th:fragment="publication_with_children(p)">
+        <!--Publication Information -->
+        <div th:replace="fragments :: publication_single(p=${p})"/>
+
+        <!--Children information-->
+        <div th:replace="fragments :: publication_list(publications=${p.children})"/>
+    </div>
+</body>
+</html>

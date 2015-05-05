@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title th:text="${person.name}"> Homepage </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"/>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"/>
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux.css" rel="stylesheet" />
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux-responsive.css" rel="stylesheet" />
+
+    <script src="http://fuelux.exacttargetapps.com/fuelux/2.0/loader.min.js" type="text/javascript"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+</head>
+<body>
+
+    <div class="navbar" th:replace="menu :: top">
+        Menu content
+    </div>
+    <div class="container" th:unless="${person == null}">
+
+        <div class="row">
+            <h1 th:text="${person.name}">Test Testovici, PhD</h1>
+        </div>
+
+        <div  th:unless="${authoredPublications == null || authoredPublications.size() == 0}" class="row">
+            <h2> <span class="icon-file"/> Authored Publications </h2>
+        </div>
+
+        <!--Authored publication list-->
+        <div th:replace="fragments :: publication_list(publications=${authoredPublications})"/>
+
+        <!--Edited publication list-->
+        <div th:unless="${editedPublications == null || editedPublications.size() == 0}" class="row">
+            <h2> <span class="icon-file"/> Edited publications </h2>
+        </div>
+
+        <div th:replace="fragments :: publication_list(publications=${editedPublications})"/>
+
+    </div>
+
+</body>
+</html>

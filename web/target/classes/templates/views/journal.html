@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Journal Information </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"/>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"/>
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux.css" rel="stylesheet" />
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux-responsive.css" rel="stylesheet" />
+
+    <script src="http://fuelux.exacttargetapps.com/fuelux/2.0/loader.min.js" type="text/javascript"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+</head>
+<body>
+<div class="navbar" th:replace="menu :: top">
+    Menu content
+</div>
+
+<div id="content" class="container">
+
+    <div th:unless="${journal == null}">
+        <h1 th:text="${journal.name}"> Name</h1>
+        <h2 th:text="#{label.editions}"> Journal Editions </h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Year</th>
+                <th>Volume</th>
+                <th>Number</th>
+                <th>Contents</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="edition : ${editions}" >
+                <td th:text="${edition.year}"> Test Title</td>
+                <td th:text="${edition.volume}"> Test date</td>
+                <td th:text="${edition.number}"> 2000 </td>
+                <td> <a href="#" th:href="@{'/journals/editions/' + ${edition.id} + '/journal/' + ${journal.id}}" th:text="#{label.more}"> More </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

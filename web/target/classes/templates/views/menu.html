@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div th:fragment="top">
+            <nav class="navbar navbar-top  navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Information Systems Project</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/people/" th:text="#{label.authors}">Auth</a></li>
+                        <li><a href="/publications" th:text="#{label.publications}">Publ</a></li>
+                        <li><a href="/journals" th:text="#{label.journals}">Jour</a></li>
+                        <li><a href="/conferences" th:text="#{label.conferences}">Conf</a></li>
+                        <li><a href="/series" th:text="#{label.series}">Ser</a></li>
+                        <li><a href="/schools" th:text="#{label.schools}">Sch</a></li>
+                        <li><a href="/publishers" th:text="#{label.publishers}">Pub</a></li>
+                        <li><a href="/benchmarks" th:text="#{label.benchmarks}">Bench</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </body>
+</html>

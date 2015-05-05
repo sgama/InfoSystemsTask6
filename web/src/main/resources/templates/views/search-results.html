@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Search results </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux.css" rel="stylesheet" />
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux-responsive.css" rel="stylesheet" />
+
+    <script src="http://fuelux.exacttargetapps.com/fuelux/2.0/loader.min.js" type="text/javascript"></script>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"/>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"/>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+</head>
+<body>
+<div  class="navbar" th:replace="menu :: top">
+    Menu content
+</div>
+
+<div id="content">
+    <div class="container">
+        <h4> Persons matching search string <span th:text="${searchResponse.searchString}"></span></h4>
+
+        <div th:if="${searchResponse.persons == null || searchResponse.persons.size() == 0}">
+            <p> 0 results. </p>
+        </div>
+
+        <div th:unless="${searchResponse.persons == null || searchResponse.persons.size() == 0}">
+            <div th:each="person : ${searchResponse.persons}" class="row">
+                <a th:href="@{'/people/' + ${person.id}}" th:text="${person.name}"/>
+            </div>
+        </div>
+
+        <h4> Publications matching search string <span th:text="${searchResponse.searchString}"></span></h4>
+
+        <div th:if="${searchResponse.publications == null || searchResponse.publications.size() == 0}">
+            <p> 0 results. </p>
+        </div>
+
+        <div th:unless="${searchResponse.publications == null || searchResponse.publications.size() == 0}">
+            <div th:each="publication : ${searchResponse.publications}" class="row">
+                <a th:href="@{'/publications/' + ${publication.id}}" th:text="${publication.title}"/>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

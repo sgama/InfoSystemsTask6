@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title> List of all the persons </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"/>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"/>
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux.css" rel="stylesheet" />
+
+    <link href="http://fuelux.exacttargetapps.com/fuelux/2.0/css/fuelux-responsive.css" rel="stylesheet" />
+
+    <script src="http://fuelux.exacttargetapps.com/fuelux/2.0/loader.min.js" type="text/javascript"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+</head>
+<body>
+<div class="navbar" th:replace="menu :: top">
+    Menu content
+</div>
+
+<div id="content" class="container fuelux">
+    <div class="row">
+        <h1 class="col-sm-12" th:text="#{label.persons}"> Persons </h1>
+    </div>
+
+    <!-- DATAGRID MARKUP -->
+    <table id="MyGrid" class="table table-bordered datagrid">
+        <thead>
+        <tr>
+            <th>
+                <span class="datagrid-header-title"> <h4> Person Search </h4> </span>
+                <div class="datagrid-header-left"></div>
+                <div class="datagrid-header-right">
+                    <div class="input-append search datagrid-search">
+                        <input style="height : inherit" type="text" class="input-medium" placeholder="Search"/>
+                        <button class="btn"><i class="icon-search"></i></button>
+                    </div>
+                </div>
+            </th>
+        </tr>
+        </thead>
+
+        <tfoot>
+        <tr>
+            <th>
+                <div class="datagrid-footer-left" style="display:none;">
+                    <div class="grid-controls">
+                        <span><span class="grid-start"></span> - <span class="grid-end"></span> of <span class="grid-count"></span></span>
+                        <select class="grid-pagesize">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>25</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>Per Page</span>
+                    </div>
+                </div>
+                <div class="datagrid-footer-right" style="display:none;">
+                    <div class="grid-pager">
+                        <button class="btn grid-prevpage">
+                            <i class="icon-chevron-left"></i>
+                        </button>
+                        <span>Page</span>
+                        <div class="input-append dropdown combobox">
+                            <input style="height : inherit" class="span1" type="text"/>
+                        </div>
+                        <span>
+                            of <span class="grid-pages"></span>
+                        </span>
+                        <button class="btn grid-nextpage"><i class="icon-chevron-right"></i></button>
+                    </div>
+                </div>
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+
+    <!-- Logic for Datagrid -->
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var ISKPersonDataSource = function (options) {
+            this._formatter = options.formatter;
+            this._columns = options.columns;
+        };
+
+        ISKPersonDataSource.prototype = {
+
+            columns: function () {
+                return this._columns;
+            },
+
+            data: function (options, callback) {
+
+                console.log(options);
+
+                var url = window.location.origin + '/people/ajax';
+                var self = this;
+                url += '?start=' + (options.pageIndex * options.pageSize);
+                url += '&size=' + options.pageSize;
+
+                //SEARCH
+                if (options.search) {
+                    //To Do escape this
+                    url += "&search=" + options.search;
+                }
+
+                //SORTING
+                if (options.sortProperty) {
+                    url += "&sortProperty=" + options.sortProperty;
+                    url += "&sortDirection=" + options.sortDirection;
+                }
+
+                $.ajax(url, {
+                    type: 'GET'
+                }).done(function (response) {
+                    data = response.data;
+                    var count = response.total;
+
+                    // PAGING
+                    var startIndex = options.pageIndex * options.pageSize;
+                    var endIndex = startIndex + options.pageSize;
+                    var end = (endIndex > count) ? count : endIndex;
+                    var pages = Math.ceil(count / options.pageSize);
+                    var page = options.pageIndex + 1;
+                    var start = startIndex + 1;
+
+                    if (self._formatter) self._formatter(data);
+
+                    callback({ data: data, start: start, end: end, count: count, pages: pages, page: page });
+                });
+            }
+        };
+        /*]]>*/
+    </script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $('#MyGrid').datagrid({
+            dataSource: new ISKPersonDataSource({
+                data_url : window.location.origin + '/people/ajax',
+                initial_load_from_server: true,
+                columns: [{
+                    property: 'name',
+                    label: 'Person name',
+                    sortable: true
+                },{
+                    property: 'authored_publications',
+                    label: 'Publications authored',
+                    sortable: false
+                }, {
+                    property: 'edited_publications',
+                    label: 'Publications edited',
+                    sortable: false
+                }, {
+                    property: 'url',
+                    label: 'Web Page',
+                    sortable: false
+                }],
+                formatter: function (items) {
+                    $.each(items, function (index, item) {
+                        item.url = '<a href="' + window.location.origin + '/people/' + encodeURIComponent(item.id) + '">View more</a>'
+                    });
+                }
+
+            }),
+            stretchHeight: true
+        });
+        /*]]>*/
+    </script>
+
+    <!-- END DATAGRID MARKUP -->
+
+
+</div>
+
+
+</body>
+</html>
