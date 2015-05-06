@@ -1,0 +1,13 @@
+Testname
+Find author distance	1.4799342105263158
+Find with filter	1324.2857142857142
+Count publications by year interval	7.564231738035264
+Count all publications for a conference	0.1570214770486941
+Find ordered by	2855.0
+Average authors for publication	13463.0
+Find publication by id	0.21239940528166523
+Count all authors for a conference	6.568713450292397
+Find co-authors	0.44037774624455645
+
+Publication: Id, title, year, authors
+Person: Id, authoredPublications, editedPublications

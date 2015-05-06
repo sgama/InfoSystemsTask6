@@ -51,7 +51,7 @@ public class Db4oPublicationDao extends Db4oDao<String, Publication> implements 
         while (results.hasNext()) {
             Publication publication = results.next();
             Set<Person> authors = publication.getAuthors();
-            if (authors != null && authors.size() > 0) {
+            if (authors != null) {
                 sum += publication.getAuthors().size();
             }
             count += 1;

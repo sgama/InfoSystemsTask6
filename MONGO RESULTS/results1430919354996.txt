@@ -1,0 +1,14 @@
+Testname
+Find author distance	52.209580838323355
+Find with filter	44.35
+Count publications by year interval	18.153225806451612
+Count all publications for a conference	12.946762589928058
+Find ordered by	44.5
+Average authors for publication	1493.6666666666667
+Find publication by id	0.15384352404232404
+Count all authors for a conference	36.643442622950815
+Find co-authors	3.0921864290610004
+
+Mongo: Default Installation
+Publication: id, title, year
+Person: id

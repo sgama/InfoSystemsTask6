@@ -129,6 +129,8 @@ public class PersistenceConfig {
     public static EmbeddedConfiguration defaultConfiguration() {
         EmbeddedConfiguration configuration = Db4oEmbedded.newConfiguration();
         configuration.common().add(new TransparentPersistenceSupport());
+        configuration.common().weakReferences(false);
+        configuration.common().bTreeNodeSize(400);
         setupStorage(configuration);
         addUniqueConstrains(configuration);
         return configuration;
@@ -141,7 +143,7 @@ public class PersistenceConfig {
     private static void setupStorage(EmbeddedConfiguration configuration) {
         // max size = block_size * 2 GB
         Storage fileStorage = new FileStorage();
-        Storage cachingStorage = new CachingStorage(fileStorage, 1024, 4 * 1024);
+        Storage cachingStorage = new CachingStorage(fileStorage, 64, 1024);
         configuration.file().storage(cachingStorage);
         configuration.file().blockSize(8);
     }
@@ -153,9 +155,23 @@ public class PersistenceConfig {
     private static void addUniqueConstrains(EmbeddedConfiguration configuration) {
         Class[] classes = new Class[] { Db4oArticle.class, Db4oBook.class, Db4oConference.class, Db4oConferenceEdition.class, Db4oInCollection.class, Db4oInProceedings.class, Db4oJournal.class, Db4oJournalEdition.class, Db4oMasterThesis.class, Db4oPerson.class, Db4oPhdThesis.class, Db4oProceedings.class, Db4oPublication.class, Db4oPublisher.class, Db4oSchool.class, Db4oSeries.class };
         String ID_FIELD = "id";
+        //index 1
         for (Class clazz : classes) {
             configuration.common().objectClass(clazz).objectField(ID_FIELD).indexed(true);
             configuration.common().add(new UniqueFieldValueConstraint(clazz, ID_FIELD));
         }
+       
+        //index 2
+        configuration.common().objectClass(Db4oConferenceEdition.class).objectField("conference").indexed(true);
+        //index 3
+        configuration.common().objectClass(Db4oPublication.class).objectField("authors").indexed(true);
+        configuration.common().objectClass(Db4oPublication.class).objectField("editors").indexed(true);
+        //index 4
+        configuration.common().objectClass(Db4oPublication.class).objectField("year").indexed(true);
+        //index 5
+        configuration.common().objectClass(Db4oPublication.class).objectField("title").indexed(true);
+        //index 6
+        configuration.common().objectClass(Db4oPerson.class).objectField("authoredPublications").indexed(true);
+        configuration.common().objectClass(Db4oPerson.class).objectField("editedPublications").indexed(true);
     }
 }

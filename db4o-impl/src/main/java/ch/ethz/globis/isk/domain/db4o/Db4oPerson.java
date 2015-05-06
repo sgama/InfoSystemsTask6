@@ -14,13 +14,10 @@ import java.util.Set;
 
 public class Db4oPerson implements Person, Activatable {
 
-	@Indexed()
     private String id;
 
     private String name;
-
     public ActivatableSet<Publication> authoredPublications;
-
     public ActivatableSet<Publication> editedPublications;
 
     private transient Activator activator;

@@ -1,35 +1,35 @@
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oProceedingsDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPublisher.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oConferenceEdition.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPublisherDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oConference.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/transaction/db4o/Db4oTransactionManager.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPublication.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oProceedings.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oMasterThesisDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oArticle.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oSchool.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oSeriesDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oBookDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oJournalEdition.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oBook.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oInCollectionDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/config/PersistenceConfig.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oInProceedingsDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPublicationDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPerson.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPhdThesisDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oSeries.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPersonDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oConferenceEditionDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oInProceedings.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oMasterThesis.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oConferenceDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oJournalEditionDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oInCollection.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oSchoolDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPhdThesis.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oArticleDao.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oJournal.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oJournalDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oInCollectionDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oSeries.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oConferenceDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oJournalEdition.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPerson.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPublisherDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oProceedings.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oSchoolDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oBook.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oInProceedings.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/transaction/db4o/Db4oTransactionManager.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oBookDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPublicationDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPhdThesisDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oJournalDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oConference.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oInProceedingsDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPublisher.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oPersonDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oConferenceEditionDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oArticle.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oSchool.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oConferenceEdition.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPublication.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oMasterThesisDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oProceedingsDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oJournal.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oSeriesDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/config/PersistenceConfig.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oMasterThesis.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oPhdThesis.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/domain/db4o/Db4oInCollection.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oArticleDao.java
+/Users/vdemotz/Desktop/InfoSystemsTask6/db4o-impl/src/main/java/ch/ethz/globis/isk/persistence/db4o/Db4oJournalEditionDao.java

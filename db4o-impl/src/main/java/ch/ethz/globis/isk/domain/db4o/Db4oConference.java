@@ -14,7 +14,6 @@ import java.util.Set;
 
 public class Db4oConference implements Conference, Activatable {
 
-	@Indexed()
     private String id;
 
     private String name;
