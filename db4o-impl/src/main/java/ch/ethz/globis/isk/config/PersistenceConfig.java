@@ -141,7 +141,7 @@ public class PersistenceConfig {
     private static void setupStorage(EmbeddedConfiguration configuration) {
         // max size = block_size * 2 GB
         Storage fileStorage = new FileStorage();
-        Storage cachingStorage = new CachingStorage(fileStorage, 1024, 4 * 1024);
+        Storage cachingStorage = new CachingStorage(fileStorage, 64, 4 * 1024);
         configuration.file().storage(cachingStorage);
         configuration.file().blockSize(8);
     }

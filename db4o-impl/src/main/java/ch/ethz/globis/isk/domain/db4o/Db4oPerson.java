@@ -18,9 +18,9 @@ public class Db4oPerson implements Person, Activatable {
     private String id;
 
     private String name;
-
+    @Indexed()
     public ActivatableSet<Publication> authoredPublications;
-
+    @Indexed()
     public ActivatableSet<Publication> editedPublications;
 
     private transient Activator activator;

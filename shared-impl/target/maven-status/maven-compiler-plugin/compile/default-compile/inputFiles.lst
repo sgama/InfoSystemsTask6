@@ -1,22 +1,22 @@
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/ProceedingsServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/cache/RequestResultCache.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/PhdThesisServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/JournalServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/benchmark/BenchmarkSuiteImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/ConferenceServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/PublisherServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/PersonServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/BookServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/utils/Comparators.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/transaction/CacheAwareTransactionManager.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/persistence/ServiceConfig.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/JournalEditionServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/ArticleServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/ConferenceEditionServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/SchoolServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/InCollectionServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/MasterThesisServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/SeriesServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/PublicationServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/BaseServiceImpl.java
-/Users/vdemotz/Documents/Ecole/ETHZ/Sixth Semester/Information Systems/Projects/project6/task5-solution/shared-impl/src/main/java/ch/ethz/globis/isk/service/InProceedingsServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/BaseServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/PublicationServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/transaction/CacheAwareTransactionManager.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/InProceedingsServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/PhdThesisServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/SchoolServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/JournalServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/benchmark/BenchmarkSuiteImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/JournalEditionServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/InCollectionServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/ConferenceEditionServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/ConferenceServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/cache/RequestResultCache.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/SeriesServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/BookServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/persistence/ServiceConfig.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/utils/Comparators.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/PublisherServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/PersonServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/ProceedingsServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/MasterThesisServiceImpl.java
+/Users/samsongama/Github/InfoSystemsTask6/shared-impl/src/main/java/ch/ethz/globis/isk/service/ArticleServiceImpl.java
