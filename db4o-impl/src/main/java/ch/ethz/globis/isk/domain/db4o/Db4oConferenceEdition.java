@@ -11,12 +11,10 @@ import com.db4o.ta.Activatable;
 
 public class Db4oConferenceEdition implements ConferenceEdition, Activatable {
 
-	@Indexed()
     private String id;
 
     private Integer year;
 
-    @Indexed()
     private Conference conference;
 
     private Proceedings proceedings;

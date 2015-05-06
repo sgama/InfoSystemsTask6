@@ -14,20 +14,15 @@ import java.util.Set;
 
 public class Db4oPublication implements Publication, Activatable {
 
-	@Indexed()
     private String id;
 
-	@Indexed()
     private String title;
 
     private String electronicEdition;
 
-    @Indexed()
     private int year;
 
-    @Indexed()
     private ActivatableSet<Person> authors;
-    @Indexed()
     private ActivatableSet<Person> editors;
 
     protected transient Activator activator;

@@ -14,7 +14,6 @@ import java.util.Set;
 
 public class Db4oJournal implements Journal, Activatable {
 
-	@Indexed()
     private String id;
 
     private String name;
