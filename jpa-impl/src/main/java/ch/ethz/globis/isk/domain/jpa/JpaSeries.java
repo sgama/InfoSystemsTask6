@@ -1,14 +1,19 @@
 package ch.ethz.globis.isk.domain.jpa;
 
-import ch.ethz.globis.isk.domain.Publication;
-import ch.ethz.globis.isk.domain.Series;
+import java.util.HashSet;
+import java.util.Set;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Index;
 
-import java.util.HashSet;
-import java.util.Set;
+import ch.ethz.globis.isk.domain.Publication;
+import ch.ethz.globis.isk.domain.Series;
 
 @Entity(name = "Series")
 @Table(name = "series")

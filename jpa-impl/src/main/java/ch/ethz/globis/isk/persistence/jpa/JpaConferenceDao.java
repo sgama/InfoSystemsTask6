@@ -1,17 +1,24 @@
 package ch.ethz.globis.isk.persistence.jpa;
 
-import ch.ethz.globis.isk.domain.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import ch.ethz.globis.isk.domain.Conference;
+import ch.ethz.globis.isk.domain.ConferenceEdition;
+import ch.ethz.globis.isk.domain.InProceedings;
+import ch.ethz.globis.isk.domain.Person;
+import ch.ethz.globis.isk.domain.Proceedings;
+import ch.ethz.globis.isk.domain.Publication;
 import ch.ethz.globis.isk.domain.jpa.JpaConference;
 import ch.ethz.globis.isk.persistence.ConferenceDao;
 import ch.ethz.globis.isk.persistence.ProceedingsDao;
 import ch.ethz.globis.isk.util.Filter;
 import ch.ethz.globis.isk.util.Operator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 @Repository
 public class JpaConferenceDao extends JpaDao<String, Conference> implements ConferenceDao {
@@ -38,20 +45,7 @@ public class JpaConferenceDao extends JpaDao<String, Conference> implements Conf
 
     @Override
     public Long countAuthorsForConference(String confId) {
-        Conference conference = findOne(confId);
-        Set<Person> persons = new HashSet<>();
-        for (ConferenceEdition edition : conference.getEditions()) {
-            Proceedings proceedings = edition.getProceedings();
-            if (proceedings != null) {
-                persons.addAll(proceedings.getAuthors());
-                persons.addAll(proceedings.getEditors());
-                for (InProceedings inProceedings : proceedings.getPublications()) {
-                    persons.addAll(inProceedings.getEditors());
-                    persons.addAll(inProceedings.getAuthors());
-                }
-            }
-        }
-        return Long.valueOf(persons.size());
+        return Long.valueOf(findAuthorsForConference(confId).size());
     }
 
     @Override

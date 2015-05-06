@@ -1,14 +1,20 @@
 package ch.ethz.globis.isk.domain.jpa;
 
-import ch.ethz.globis.isk.domain.Conference;
-import ch.ethz.globis.isk.domain.ConferenceEdition;
-import ch.ethz.globis.isk.domain.Proceedings;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Index;
 
-import javax.persistence.*;
+import ch.ethz.globis.isk.domain.Conference;
+import ch.ethz.globis.isk.domain.ConferenceEdition;
+import ch.ethz.globis.isk.domain.Proceedings;
 
 @Entity(name = "ConferenceEdition")
 @Table(name = "conference_edition")
