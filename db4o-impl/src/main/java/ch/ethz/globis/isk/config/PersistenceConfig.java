@@ -1,6 +1,8 @@
 package ch.ethz.globis.isk.config;
 
 import ch.ethz.globis.isk.domain.db4o.*;
+
+import com.db4o.Db4o;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.config.EmbeddedConfiguration;
@@ -9,9 +11,11 @@ import com.db4o.io.CachingStorage;
 import com.db4o.io.FileStorage;
 import com.db4o.io.Storage;
 import com.db4o.ta.TransparentPersistenceSupport;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
+
 import java.io.File;
 
 /**
@@ -166,11 +170,11 @@ public class PersistenceConfig {
         //index 3
         configuration.common().objectClass(Db4oPublication.class).objectField("authors").indexed(true);
         configuration.common().objectClass(Db4oPublication.class).objectField("editors").indexed(true);
-        //index 4
+        //index 6
         configuration.common().objectClass(Db4oPublication.class).objectField("year").indexed(true);
         //index 5
         configuration.common().objectClass(Db4oPublication.class).objectField("title").indexed(true);
-        //index 6
+        //index 4
         configuration.common().objectClass(Db4oPerson.class).objectField("authoredPublications").indexed(true);
         configuration.common().objectClass(Db4oPerson.class).objectField("editedPublications").indexed(true);
     }

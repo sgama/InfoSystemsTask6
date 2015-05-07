@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="27.73" tests="9" errors="0" skipped="0" failures="0">
+<testsuite name="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="30.203" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/jre/lib"/>
@@ -62,13 +62,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testShortestPathBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="7.618"/>
-  <testcase name="testFindWithFilterBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="1.143"/>
-  <testcase name="testCountPublicationsForYearIntervalBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.086"/>
-  <testcase name="testCountAllPublicationsForConferenceBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.229"/>
-  <testcase name="testFindOrderedByBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="5.521"/>
-  <testcase name="testAverageAuthorsForPublicationBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="12.236"/>
+  <testcase name="testShortestPathBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="7.804"/>
+  <testcase name="testFindWithFilterBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="1.253"/>
+  <testcase name="testCountPublicationsForYearIntervalBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.108"/>
+  <testcase name="testCountAllPublicationsForConferenceBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.22"/>
+  <testcase name="testFindOrderedByBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="6.159"/>
+  <testcase name="testAverageAuthorsForPublicationBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="13.608"/>
   <testcase name="testFindPublicationById" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.006"/>
-  <testcase name="testCountAllAuthorsForConferenceBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.007"/>
-  <testcase name="testCoauthorsBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.884"/>
+  <testcase name="testCountAllAuthorsForConferenceBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="0.008"/>
+  <testcase name="testCoauthorsBenchmark" classname="ch.ethz.globis.isk.db4o.benchmark.Db4oPerformanceOperationsTest" time="1.037"/>
 </testsuite>
